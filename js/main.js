@@ -15,3 +15,10 @@ closePopupButton.addEventListener('click', () => {
     popupBg.classList.remove('active')
     popup.classList.remove('active')
 })
+
+document.addEventListener('click', (e) => {
+    if (e.target === popupBg) {
+        popupBg.classList.remove('active')
+        popup.classList.remove('active')
+    }
+})
