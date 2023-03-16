@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.open__popup {
+    display: inline-block;
+    background: #2982ff;
+    color: #fff;
+    border: 1px solid #2982ff;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+
+}
+
+.open__popup:hover {
+    color: #2982ff;
+    background: #ffffff;
+    transition: 0.5s all;
+}
+
+.popup__bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s all;
+}
+
+.popup__bg.active {
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #ffffff;
+    padding: 25px;
+    width: 400px;
+    border-radius: 15px;
+    transition: 0.5s all;
+}
+
+.popup.active {
+    transform: translate(-50%, -50%) scale(1);
+    transition: 0.5s all;
+}
+
+.popup__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 40px;
+}
+
+.popup__close:hover {
+    opacity: .5;
+    transition: 0.5s all;
+}
+
+.popup label {
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.label__text {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: gray;
+    margin-top: 15px;
+}
+
+.popup input {
+    height: 45px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+}
+
+.popup input:focus {
+    border-bottom: 1px solid #2982ff;
+}
+
+.popup input:focus + .label__text{
+    color: #2982ff;
+}
+
+.popup textarea {
+    resize: none;
+    width: 100%;
+    height: 150px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+    font-size: 18px;
+    padding-top: 5px;
+
+}
+
+.popup textarea:focus {
+    border-bottom: 1px solid #2982ff;
+}
+
+.popup textarea:focus + .label__text{
+    color: #2982ff;
+}
+
+.popup button {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    border: 1px solid #2982ff;
+    background: #2982ff;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: 0.5s all;
+}
+
+.popup button:hover {
+    color: #2982ff;
+    background: #ffffff;
+    transition: 0.5s all;
+}
+
+
+
